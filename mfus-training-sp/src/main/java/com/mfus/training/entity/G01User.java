@@ -1,8 +1,15 @@
 package com.mfus.training.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 /**
@@ -14,6 +21,7 @@ import java.util.Date;
 @NamedQuery(name="G01User.findAll", query="SELECT g FROM G01User g")
 public class G01User implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
 
 	@Id
 	@Column(name="user_ref")
