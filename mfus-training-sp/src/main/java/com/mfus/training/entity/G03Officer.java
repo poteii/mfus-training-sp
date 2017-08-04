@@ -3,8 +3,7 @@ package com.mfus.training.entity;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
-// GG KNES 
-
+// GG KNES
 /**
  * The persistent class for the g03_officer database table.
  * 
