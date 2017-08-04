@@ -1,8 +1,13 @@
 package com.mfus.training.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 
 /**
@@ -15,6 +20,7 @@ import java.sql.Timestamp;
 public class RftSubDistrict implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	//test
 	@Id
 	@Column(name="sub_district_code")
 	private int subDistrictCode;
