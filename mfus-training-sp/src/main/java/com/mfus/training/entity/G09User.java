@@ -16,7 +16,6 @@ import javax.persistence.TemporalType;
  * The persistent class for the g09_user database table.
  * 
  */
-
 @Entity
 @Table(name="g09_user")
 @NamedQuery(name="G09User.findAll", query="SELECT g FROM G09User g")

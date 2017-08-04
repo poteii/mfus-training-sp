@@ -25,7 +25,7 @@ public class G09Student implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	
-	@Id
+		@Id
 	@Column(name="student_ref")
 	private int studentRef;
 
@@ -33,6 +33,9 @@ public class G09Student implements Serializable {
 	@Column(name="birth_date")
 	private Date birthDate;
 
+	
+	
+	
 	@Column(name="create_datetime")
 	private Timestamp createDatetime;
 
