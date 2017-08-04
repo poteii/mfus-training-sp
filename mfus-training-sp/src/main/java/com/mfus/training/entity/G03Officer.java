@@ -14,6 +14,7 @@ import java.sql.Timestamp;
 @NamedQuery(name="G03Officer.findAll", query="SELECT g FROM G03Officer g")
 public class G03Officer implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
 
 	@Id
 	@Column(name="officer_ref")
