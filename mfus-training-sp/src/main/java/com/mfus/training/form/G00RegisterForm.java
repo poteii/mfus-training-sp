@@ -7,10 +7,9 @@ import com.mfus.training.entity.G00User;
 
 public class G00RegisterForm implements Serializable {
 
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
+
 	//for insert
 	private G00Student 		g00Student;
 	private G00User 		g00User;
@@ -29,7 +28,4 @@ public class G00RegisterForm implements Serializable {
 		this.g00User = g00User;
 	}
 	
-	
-	
-
 }
