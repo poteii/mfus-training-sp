@@ -12,6 +12,7 @@ import javax.persistence.Table;
 
 
 
+
 /**
  * The persistent class for the g05_sponsors database table.
  * 
