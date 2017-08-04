@@ -1,9 +1,17 @@
 package com.mfus.training.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
-import java.util.Date;
 import java.sql.Timestamp;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 /**
@@ -16,6 +24,7 @@ import java.sql.Timestamp;
 public class G09Student implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	
 	@Id
 	@Column(name="student_ref")
 	private int studentRef;

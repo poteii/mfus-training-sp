@@ -1,14 +1,22 @@
 package com.mfus.training.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 
 /**
  * The persistent class for the g09_user database table.
  * 
  */
+
 @Entity
 @Table(name="g09_user")
 @NamedQuery(name="G09User.findAll", query="SELECT g FROM G09User g")
