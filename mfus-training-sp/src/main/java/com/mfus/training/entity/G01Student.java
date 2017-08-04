@@ -24,7 +24,6 @@ import javax.persistence.TemporalType;
 public class G01Student implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	
 	@Id
 	@Column(name="student_ref")
 	private int studentRef;

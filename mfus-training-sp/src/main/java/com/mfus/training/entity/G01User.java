@@ -22,7 +22,6 @@ import javax.persistence.TemporalType;
 public class G01User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	
 	@Id
 	@Column(name="user_ref")
 	private int userRef;
