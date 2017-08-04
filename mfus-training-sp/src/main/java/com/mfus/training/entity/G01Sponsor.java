@@ -21,6 +21,7 @@ import javax.persistence.Table;
 public class G01Sponsor implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	
 	@Id
 	@Column(name="sponsors_id")
 	private int sponsorsId;
