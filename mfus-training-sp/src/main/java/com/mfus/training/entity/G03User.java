@@ -11,6 +11,7 @@ import java.util.Date;
  * The persistent class for the g03_user database table.
  * 
  */
+
 @Entity
 @Table(name="g03_user")
 @NamedQuery(name="G03User.findAll", query="SELECT g FROM G03User g")

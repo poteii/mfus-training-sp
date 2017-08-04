@@ -12,6 +12,7 @@ import java.sql.Timestamp;
  * The persistent class for the g03_student database table.
  * 
  */
+
 @Entity
 @Table(name="g03_student")
 @NamedQuery(name="G03Student.findAll", query="SELECT g FROM G03Student g")
