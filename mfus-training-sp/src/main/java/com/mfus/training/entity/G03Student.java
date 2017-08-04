@@ -6,6 +6,7 @@ import java.util.Date;
 import java.sql.Timestamp;
 
 
+
 /**
  * The persistent class for the g03_student database table.
  * 
