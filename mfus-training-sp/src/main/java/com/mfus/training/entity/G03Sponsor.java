@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 
+
 /**
  * The persistent class for the g03_sponsors database table.
  * 
