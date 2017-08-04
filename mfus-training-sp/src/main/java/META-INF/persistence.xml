@@ -7,6 +7,48 @@
 		<class>com.mfus.training.entity.RftSchool</class>
 		<class>com.mfus.training.entity.RftSubDistrict</class>
 		<class>com.mfus.training.entity.RftTitleName</class>
+		<class>com.mfus.training.entity.G00Officer</class>
+		<class>com.mfus.training.entity.G00Sponsor</class>
+		<class>com.mfus.training.entity.G00Student</class>
+		<class>com.mfus.training.entity.G00User</class>
+		<class>com.mfus.training.entity.G00New</class>
+		<class>com.mfus.training.entity.G01Officer</class>
+		<class>com.mfus.training.entity.G01Sponsor</class>
+		<class>com.mfus.training.entity.G01Student</class>
+		<class>com.mfus.training.entity.G01User</class>
+		<class>com.mfus.training.entity.G02Officer</class>
+		<class>com.mfus.training.entity.G02Sponsor</class>
+		<class>com.mfus.training.entity.G02Student</class>
+		<class>com.mfus.training.entity.G02User</class>
+		<class>com.mfus.training.entity.G03Officer</class>
+		<class>com.mfus.training.entity.G03Sponsor</class>
+		<class>com.mfus.training.entity.G03Student</class>
+		<class>com.mfus.training.entity.G03User</class>
+		<class>com.mfus.training.entity.G04Student</class>
+		<class>com.mfus.training.entity.G04User</class>
+		<class>com.mfus.training.entity.G05Officer</class>
+		<class>com.mfus.training.entity.G05Sponsor</class>
+		<class>com.mfus.training.entity.G06Student</class>
+		<class>com.mfus.training.entity.G06User</class>
+		<class>com.mfus.training.entity.G08Sponsor</class>
+		<class>com.mfus.training.entity.G04Officer</class>
+		<class>com.mfus.training.entity.G04Sponsor</class>
+		<class>com.mfus.training.entity.G06Officer</class>
+		<class>com.mfus.training.entity.G06Sponsor</class>
+		<class>com.mfus.training.entity.G07Officer</class>
+		<class>com.mfus.training.entity.G07Sponsor</class>
+		<class>com.mfus.training.entity.G07Student</class>
+		<class>com.mfus.training.entity.G07User</class>
+		<class>com.mfus.training.entity.G08Officer</class>
+		<class>com.mfus.training.entity.G09Student</class>
+		<class>com.mfus.training.entity.G09User</class>
 		<class>com.mfus.training.entity.G10Officer</class>
+		<class>com.mfus.training.entity.G10Sponsor</class>
+		<class>com.mfus.training.entity.G10Student</class>
+		<class>com.mfus.training.entity.G10User</class>
+		<class>com.mfus.training.entity.G05Student</class>
+		<class>com.mfus.training.entity.G05User</class>
+		<class>com.mfus.training.entity.G08Student</class>
+		<class>com.mfus.training.entity.G08User</class>
 	</persistence-unit>
 </persistence>
