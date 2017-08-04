@@ -52,3 +52,4 @@
 		<class>com.mfus.training.entity.G08User</class>
 	</persistence-unit>
 </persistence>
+
