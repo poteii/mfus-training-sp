@@ -1,8 +1,13 @@
 package com.mfus.training.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.sql.Timestamp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 
 /**
@@ -14,6 +19,7 @@ import java.sql.Timestamp;
 @NamedQuery(name="RftDistrict.findAll", query="SELECT r FROM RftDistrict r")
 public class RftDistrict implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
 
 	@Id
 	@Column(name="district_code")
