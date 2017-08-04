@@ -1,5 +1,4 @@
 package com.mfus.training.entity;
-
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
