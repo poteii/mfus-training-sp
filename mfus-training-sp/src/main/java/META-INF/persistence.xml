@@ -7,5 +7,6 @@
 		<class>com.mfus.training.entity.RftSchool</class>
 		<class>com.mfus.training.entity.RftSubDistrict</class>
 		<class>com.mfus.training.entity.RftTitleName</class>
+		<class>com.mfus.training.entity.G10Officer</class>
 	</persistence-unit>
 </persistence>

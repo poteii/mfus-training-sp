@@ -1,20 +1,27 @@
 package com.mfus.training.entity;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.sql.Timestamp;
-// GG KNES
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+
 /**
- * The persistent class for the g03_officer database table.
+ * The persistent class for the g08_officer database table.
  * 
  */
 @Entity
-@Table(name="g03_officer")
-@NamedQuery(name="G03Officer.findAll", query="SELECT g FROM G03Officer g")
-public class G03Officer implements Serializable {
+@Table(name="g08_officer")
+@NamedQuery(name="G08Officer.findAll", query="SELECT g FROM G08Officer g")
+public class G08Officer implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-
+	
 	@Id
 	@Column(name="officer_ref")
 	private int officerRef;
@@ -78,7 +85,7 @@ public class G03Officer implements Serializable {
 	@Column(name="update_user")
 	private int updateUser;
 
-	public G03Officer() {
+	public G08Officer() {
 	}
 
 	public int getOfficerRef() {
