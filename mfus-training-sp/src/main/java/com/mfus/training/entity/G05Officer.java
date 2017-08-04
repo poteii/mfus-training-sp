@@ -20,7 +20,7 @@ import javax.persistence.Table;
 @NamedQuery(name="G05Officer.findAll", query="SELECT g FROM G05Officer g")
 public class G05Officer implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 
 	@Id
 	@Column(name="officer_ref")
