@@ -36,6 +36,8 @@ public class G09Student implements Serializable {
 	
 	
 	
+	
+	
 	@Column(name="create_datetime")
 	private Timestamp createDatetime;
 

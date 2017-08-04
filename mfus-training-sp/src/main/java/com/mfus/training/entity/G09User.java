@@ -12,6 +12,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 
+
+
 /**
  * The persistent class for the g09_user database table.
  * 
