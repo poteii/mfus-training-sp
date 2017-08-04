@@ -227,5 +227,5 @@ public class G01Sponsor implements Serializable {
 	public void setWebsite(String website) {
 		this.website = website;
 	}
- 
+
 }
