@@ -21,7 +21,6 @@ import javax.persistence.Table;
 public class G01Officer implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-
 	@Id
 	@Column(name="officer_ref")
 	private int officerRef;
