@@ -6,6 +6,7 @@ import java.util.Date;
 
 
 
+
 /**
  * The persistent class for the g03_user database table.
  * 
