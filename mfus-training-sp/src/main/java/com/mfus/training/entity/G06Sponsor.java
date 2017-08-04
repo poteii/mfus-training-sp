@@ -3,26 +3,28 @@ package com.mfus.training.entity;
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
-// GG KNES
+
+
 /**
- * The persistent class for the g03_officer database table.
+ * The persistent class for the g06_sponsors database table.
  * 
  */
 @Entity
-@Table(name="g03_officer")
-@NamedQuery(name="G03Officer.findAll", query="SELECT g FROM G03Officer g")
-public class G03Officer implements Serializable {
+@Table(name="g06_sponsors")
+@NamedQuery(name="G06Sponsor.findAll", query="SELECT g FROM G06Sponsor g")
+public class G06Sponsor implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
 
 	@Id
-	@Column(name="officer_ref")
-	private int officerRef;
+	@Column(name="sponsors_id")
+	private int sponsorsId;
 
 	@Column(name="active_flag")
 	private String activeFlag;
 
 	private String address;
+
+	private String contact;
 
 	@Column(name="create_datetime")
 	private Timestamp createDatetime;
@@ -33,22 +35,6 @@ public class G03Officer implements Serializable {
 	private String district;
 
 	private String email;
-
-	@Column(name="first_name")
-	private String firstName;
-
-	private String gender;
-
-	@Column(name="last_name")
-	private String lastName;
-
-	private String manage_officer_flag;
-
-	@Column(name="officer_code")
-	private String officerCode;
-
-	@Column(name="personal_id")
-	private String personalId;
 
 	@Column(name="phone_no")
 	private String phoneNo;
@@ -67,10 +53,11 @@ public class G03Officer implements Serializable {
 
 	private String province;
 
-	private String sub_district;
+	@Column(name="sponsors_name")
+	private String sponsorsName;
 
-	@Column(name="title_code")
-	private String titleCode;
+	@Column(name="sub_district")
+	private String subDistrict;
 
 	@Column(name="update_datetime")
 	private Timestamp updateDatetime;
@@ -78,15 +65,17 @@ public class G03Officer implements Serializable {
 	@Column(name="update_user")
 	private int updateUser;
 
-	public G03Officer() {
+	private String website;
+
+	public G06Sponsor() {
 	}
 
-	public int getOfficerRef() {
-		return this.officerRef;
+	public int getSponsorsId() {
+		return this.sponsorsId;
 	}
 
-	public void setOfficerRef(int officerRef) {
-		this.officerRef = officerRef;
+	public void setSponsorsId(int sponsorsId) {
+		this.sponsorsId = sponsorsId;
 	}
 
 	public String getActiveFlag() {
@@ -103,6 +92,14 @@ public class G03Officer implements Serializable {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public String getContact() {
+		return this.contact;
+	}
+
+	public void setContact(String contact) {
+		this.contact = contact;
 	}
 
 	public Timestamp getCreateDatetime() {
@@ -135,54 +132,6 @@ public class G03Officer implements Serializable {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public String getFirstName() {
-		return this.firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getGender() {
-		return this.gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public String getLastName() {
-		return this.lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getManage_officer_flag() {
-		return this.manage_officer_flag;
-	}
-
-	public void setManage_officer_flag(String manage_officer_flag) {
-		this.manage_officer_flag = manage_officer_flag;
-	}
-
-	public String getOfficerCode() {
-		return this.officerCode;
-	}
-
-	public void setOfficerCode(String officerCode) {
-		this.officerCode = officerCode;
-	}
-
-	public String getPersonalId() {
-		return this.personalId;
-	}
-
-	public void setPersonalId(String personalId) {
-		this.personalId = personalId;
 	}
 
 	public String getPhoneNo() {
@@ -233,20 +182,20 @@ public class G03Officer implements Serializable {
 		this.province = province;
 	}
 
-	public String getSub_district() {
-		return this.sub_district;
+	public String getSponsorsName() {
+		return this.sponsorsName;
 	}
 
-	public void setSub_district(String sub_district) {
-		this.sub_district = sub_district;
+	public void setSponsorsName(String sponsorsName) {
+		this.sponsorsName = sponsorsName;
 	}
 
-	public String getTitleCode() {
-		return this.titleCode;
+	public String getSubDistrict() {
+		return this.subDistrict;
 	}
 
-	public void setTitleCode(String titleCode) {
-		this.titleCode = titleCode;
+	public void setSubDistrict(String subDistrict) {
+		this.subDistrict = subDistrict;
 	}
 
 	public Timestamp getUpdateDatetime() {
@@ -263,6 +212,14 @@ public class G03Officer implements Serializable {
 
 	public void setUpdateUser(int updateUser) {
 		this.updateUser = updateUser;
+	}
+
+	public String getWebsite() {
+		return this.website;
+	}
+
+	public void setWebsite(String website) {
+		this.website = website;
 	}
 
 }
