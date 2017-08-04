@@ -34,8 +34,7 @@ public class G09Student implements Serializable {
 	private Date birthDate;
 
 	
-	
-	
+
 	
 	
 	@Column(name="create_datetime")
