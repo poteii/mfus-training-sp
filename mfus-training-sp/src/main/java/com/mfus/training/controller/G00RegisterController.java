@@ -17,7 +17,8 @@ public class G00RegisterController {
 	@Autowired
 	private G00RegisterService g00RegisterService;
 	
-	//angular send url => localhost:8080/g00Register/createStudent
+	// angular send url => 
+	// http://localhost:8080/mfus-training-sp/g00Register/createStudent
 	@RequestMapping(value="/createStudent")
 	public void createStudent(@RequestBody G00RegisterForm form) {
 		//step 3
