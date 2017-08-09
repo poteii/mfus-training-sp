@@ -13,4 +13,6 @@ public interface G00RegisterService extends Serializable {
 
 	public G00RegisterForm getDataByStudentRef(int studentRef);
 
+	public void doUpdate(G00RegisterForm form);
+
 }

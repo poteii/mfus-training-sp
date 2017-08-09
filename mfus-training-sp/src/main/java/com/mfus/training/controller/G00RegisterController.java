@@ -69,7 +69,17 @@ public class G00RegisterController {
 	
 	
 	
-	
+	@RequestMapping(value="/doUpdate")
+	public ResponseEntity doUpdate(@RequestBody G00RegisterForm form) {
+
+		try {
+			g00RegisterService.doUpdate(form);
+			return new ResponseEntity("update success",HttpStatus.OK);
+		}catch (Exception e) {
+			//step 7 return error message
+			return new ResponseEntity("error",HttpStatus.FAILED_DEPENDENCY);
+		} 
+	}
 	
 	
 	

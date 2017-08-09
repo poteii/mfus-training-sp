@@ -29,4 +29,26 @@ public class G00UserQuery implements Serializable {
 		}
 	}
 
+	public static Object getUserByStudentRef(int studentRef, EntityManager em) {
+		Query query;
+		String selectClause;
+		String fromClause;
+		String whereClause;
+		try {
+			selectClause = "SELECT acUser.user_ref ";
+			fromClause = "FROM g00_user acUser ";
+			whereClause = "WHERE acUser.student_Ref = " + studentRef;
+
+			query = em.createNativeQuery(selectClause + fromClause + whereClause);
+
+			if(query.getResultList().size() > 0) {
+				return (Object) query.getResultList().get(0);
+			}
+
+		} finally {
+
+		}
+		return null;
+	}
+
 }

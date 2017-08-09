@@ -209,7 +209,77 @@ public class G00RegisterServiceImpl implements G00RegisterService {
 			
 		}
 	}
+
 	
+	
+	@Override
+	public void doUpdate(G00RegisterForm form) {
+		try {
+
+			updateG00Student(form);
+			updateG00User(form);
+
+		} finally {
+
+		}
+	}
+
+	private void updateG00Student(G00RegisterForm form) {
+		G00Student g00Student;
+		int studentRef;
+		try {
+			g00Student = new G00Student();
+			studentRef = form.getG00Student().getStudentRef();
+			g00Student = em.find(G00Student.class, studentRef);
+			g00Student.setEducationLevel(form.getG00Student().getEducationLevel());
+			g00Student.setPersonalId(form.getG00Student().getPersonalId());
+			g00Student.setStudentId(form.getG00Student().getStudentId());
+			g00Student.setGender(form.getG00Student().getGender());
+			g00Student.setBirthDate(form.getG00Student().getBirthDate());
+			g00Student.setTitleCode(form.getG00Student().getTitleCode());
+			g00Student.setFirstNameT(form.getG00Student().getFirstNameT());
+			g00Student.setLastNameT(form.getG00Student().getLastNameT());
+			g00Student.setFirstNameE(form.getG00Student().getFirstNameE());
+			g00Student.setLastNameE(form.getG00Student().getLastNameE());
+			g00Student.setSchoolRef(form.getG00Student().getSchoolRef());
+			g00Student.setMajorRef(form.getG00Student().getMajorRef());
+			g00Student.setNationality(form.getG00Student().getNationality());
+			g00Student.setRace(form.getG00Student().getRace());
+			g00Student.setReligion(form.getG00Student().getReligion());
+			g00Student.setPhoneNo(form.getG00Student().getPhoneNo());
+			g00Student.setEmail(form.getG00Student().getEmail());
+
+			g00Student.setProfileName(form.getG00Student().getProfileName());
+			g00Student.setProfileType(form.getG00Student().getProfileType());
+			g00Student.setProfileImage(form.getG00Student().getProfileImage());
+
+			g00Student.setUpdateUser(studentRef);
+			g00Student.setUpdateDatetime(new Timestamp(System.currentTimeMillis()));
+
+			em.merge(g00Student);
+		} finally {
+
+		}
+	}
+
+	private void updateG00User(G00RegisterForm form) {
+		G00User g00User;
+		Object obj;
+		try {
+			g00User = new G00User();
+			obj = G00UserQuery.getUserByStudentRef(form.getG00Student().getStudentRef(),em);
+			g00User = em.find(G00User.class, obj);
+			g00User.setUserId(form.getG00Student().getPersonalId());
+			g00User.setPassword(form.getG00Student().getPersonalId());
+
+			g00User.setUpdateUser(g00User.getUserRef());
+			g00User.setUpdateDatetime(new Timestamp(System.currentTimeMillis()));
+
+			em.merge(g00User);
+		} finally {
+
+		}
+	}
 	
 	
 	
