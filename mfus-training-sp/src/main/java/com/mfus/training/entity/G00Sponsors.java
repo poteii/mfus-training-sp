@@ -1,26 +1,18 @@
 package com.mfus.training.entity;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.sql.Timestamp;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-
-
 
 
 /**
- * The persistent class for the g05_sponsors database table.
+ * The persistent class for the g00_sponsors database table.
  * 
  */
 @Entity
-@Table(name="g05_sponsors")
-@NamedQuery(name="G05Sponsor.findAll", query="SELECT g FROM G05Sponsor g")
-public class G05Sponsor implements Serializable {
+@Table(name="g00_sponsors")
+@NamedQuery(name="G00Sponsors.findAll", query="SELECT g FROM G00Sponsors g")
+public class G00Sponsors implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -75,7 +67,7 @@ public class G05Sponsor implements Serializable {
 
 	private String website;
 
-	public G05Sponsor() {
+	public G00Sponsors() {
 	}
 
 	public int getSponsorsId() {

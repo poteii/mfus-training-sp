@@ -6,13 +6,13 @@ import java.sql.Timestamp;
 
 
 /**
- * The persistent class for the g06_sponsors database table.
+ * The persistent class for the g02_sponsors database table.
  * 
  */
 @Entity
-@Table(name="g06_sponsors")
-@NamedQuery(name="G06Sponsor.findAll", query="SELECT g FROM G06Sponsor g")
-public class G06Sponsor implements Serializable {
+@Table(name="g02_sponsors")
+@NamedQuery(name="G02Sponsors.findAll", query="SELECT g FROM G02Sponsors g")
+public class G02Sponsors implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -67,7 +67,7 @@ public class G06Sponsor implements Serializable {
 
 	private String website;
 
-	public G06Sponsor() {
+	public G02Sponsors() {
 	}
 
 	public int getSponsorsId() {
