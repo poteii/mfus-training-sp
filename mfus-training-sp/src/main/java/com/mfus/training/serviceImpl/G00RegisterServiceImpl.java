@@ -1,6 +1,8 @@
 package com.mfus.training.serviceImpl;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -11,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import com.mfus.training.entity.G00Student;
 import com.mfus.training.entity.G00User;
+import com.mfus.training.entity.RftMajor;
+import com.mfus.training.entity.RftSchool;
 import com.mfus.training.form.G00RegisterForm;
 import com.mfus.training.query.G00StudentQuery;
 import com.mfus.training.query.G00UserQuery;
@@ -128,6 +132,82 @@ public class G00RegisterServiceImpl implements G00RegisterService {
 			
 		}
 		
+	}
+
+	@Override
+	public List<G00RegisterForm> doSearch(G00RegisterForm form) {
+		//step s1 add try/catch
+		List<G00RegisterForm> resultList = new ArrayList<G00RegisterForm>();//list ที่ใช้ในการ return
+		List<Object> objList = new ArrayList<Object>();//list ที่ใช้ในการรับค่าจาก query
+		G00RegisterForm registerForm;
+		G00Student g00Student;
+		RftSchool rftSchool;
+		RftMajor rftMajor;
+		try {
+			objList = G00StudentQuery.doSearch(form,em);
+			System.out.println("size = " + objList.size());
+			for(Object obj : objList) {
+				// begin new object
+				registerForm = new G00RegisterForm();
+				g00Student = new G00Student();
+				rftSchool = new RftSchool();
+				rftMajor = new RftMajor();
+				registerForm.setG00Student(new G00Student());
+				registerForm.setRftMajor(new RftMajor());
+				registerForm.setRftSchool(new RftSchool());
+				//end new object
+				
+				//begin find data
+				/*em.find(EntityClass,PK)*/
+				g00Student = em.find(G00Student.class, obj);
+				
+				if(g00Student.getSchoolRef() != 0) {
+					rftSchool = em.find(RftSchool.class, g00Student.getSchoolRef());
+				}
+				
+				if(g00Student.getMajorRef() != 0) {
+					rftMajor = em.find(RftMajor.class, g00Student.getMajorRef());
+				}
+				//end find data
+				
+				
+				//begin set data to form
+				registerForm.setG00Student(g00Student);
+				registerForm.setRftSchool(rftSchool);
+				registerForm.setRftMajor(rftMajor);
+				//end set data to form
+				
+				//begin add into list
+				resultList.add(registerForm);
+				//end add into list
+			}
+			return resultList;
+			
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+		}
+		return resultList;
+	}
+
+	@Override
+	public G00RegisterForm getDataByStudentRef(int studentRef) {
+		G00RegisterForm form;
+		G00Student g00Student;
+		try {
+			form = new G00RegisterForm();
+			g00Student = new G00Student();
+			
+			g00Student = em.find(G00Student.class, studentRef);
+			if(g00Student != null) {
+				form.setG00Student(new G00Student());
+				form.setG00Student(g00Student);
+			}
+			
+			return form;
+		}finally {
+			
+		}
 	}
 	
 	
