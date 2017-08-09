@@ -60,6 +60,17 @@
 		<class>com.mfus.training.entity.G08New</class>
 		<class>com.mfus.training.entity.G09New</class>
 		<class>com.mfus.training.entity.G10New</class>
+		<class>com.mfus.training.entity.G00News</class>
+		<class>com.mfus.training.entity.G01News</class>
+		<class>com.mfus.training.entity.G02News</class>
+		<class>com.mfus.training.entity.G03News</class>
+		<class>com.mfus.training.entity.G04News</class>
+		<class>com.mfus.training.entity.G05News</class>
+		<class>com.mfus.training.entity.G06News</class>
+		<class>com.mfus.training.entity.G07News</class>
+		<class>com.mfus.training.entity.G08News</class>
+		<class>com.mfus.training.entity.G09News</class>
+		<class>com.mfus.training.entity.G10News</class>
 	</persistence-unit>
 </persistence>
 
