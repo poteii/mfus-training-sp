@@ -50,6 +50,16 @@
 		<class>com.mfus.training.entity.G05User</class>
 		<class>com.mfus.training.entity.G08Student</class>
 		<class>com.mfus.training.entity.G08User</class>
+		<class>com.mfus.training.entity.G01New</class>
+		<class>com.mfus.training.entity.G02New</class>
+		<class>com.mfus.training.entity.G03New</class>
+		<class>com.mfus.training.entity.G04New</class>
+		<class>com.mfus.training.entity.G05New</class>
+		<class>com.mfus.training.entity.G06New</class>
+		<class>com.mfus.training.entity.G07New</class>
+		<class>com.mfus.training.entity.G08New</class>
+		<class>com.mfus.training.entity.G09New</class>
+		<class>com.mfus.training.entity.G10New</class>
 	</persistence-unit>
 </persistence>
 
